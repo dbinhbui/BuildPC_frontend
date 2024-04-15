@@ -87,6 +87,7 @@ const ProductDetailComponent = ({ idProduct }) => {
                 dispatch(addOrderProduct({
                     orderItem: {
                         name: productDetails?.name,
+                        type: productDetails?.type,
                         amount: numProduct,
                         image: productDetails?.image,
                         price: productDetails?.price,
@@ -178,7 +179,7 @@ const ProductDetailComponent = ({ idProduct }) => {
                                     border: 'none'
                                 }}
                                 onClick={handleAddOrderProduct}
-                                textButton={'Thêm vào giỏ hàng'}
+                                textButton={'Thêm vào danh sách'}
                                 styleTextButton={{ color: '#fff', fontSize: '15px', fontWeight: '600' }}
                             ></ButtonComponent>
                             {errorLimitOrder && <div style={{ color: 'red' }}>Hết hàng</div>}

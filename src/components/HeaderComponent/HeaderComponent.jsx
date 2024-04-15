@@ -127,9 +127,9 @@ const HeaderComponent = ({ isHiddenSearch = false, isHiddenCart = false }) => {
                     {!isHiddenCart && (
                         <div onClick={() => navigate('/order')} style={{ cursor: 'pointer' }}>
                             <Badge count={order?.orderItems?.length} size="small">
-                                <ShoppingCartOutlined style={{ fontSize: '30px', color: '#efd8ff' }} />
+                                <ToolOutlined style={{ fontSize: '30px', color: '#efd8ff' }} />
                             </Badge>
-                            <WrapperTextHeaderSmall>Giỏ hàng</WrapperTextHeaderSmall>
+                            <WrapperTextHeaderSmall>Xây dựng cấu hình</WrapperTextHeaderSmall>
                         </div>
 
                     )}
