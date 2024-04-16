@@ -900,7 +900,7 @@ const OrderPage = () => {
                                 </span>
                             </WrapperTotal>
                         </div>
-                        <ButtonComponent
+                        {/* <ButtonComponent
                             onClick={() => handleAddCart()}
                             size={40}
                             styleButton={{
@@ -912,7 +912,7 @@ const OrderPage = () => {
                             }}
                             //textButton={'Mua hàng'}
                             styleTextButton={{ color: '#fff', fontSize: '15px', fontWeight: '700' }}
-                        ></ButtonComponent>
+                        ></ButtonComponent> */}
                     </WrapperRight>
                 </div>
             </div>
