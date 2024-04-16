@@ -131,7 +131,7 @@ export const CustomCheckbox = styled(Checkbox)`
 `
 
 export const TdBuildPC = styled.td`
-  border: 1px solid blue;
+  border: 1px solid;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
