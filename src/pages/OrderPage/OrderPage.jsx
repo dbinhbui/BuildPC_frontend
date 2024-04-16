@@ -752,63 +752,7 @@ const OrderPage = () => {
                                 </WrapperListOrder>
                             </TdBuildPC>
                         </tr>
-                        <tr>
-                            <TdBuildPC >10. Tản nhiệt AIO</TdBuildPC>
-                            <TdBuildPC>
-                                <BtnComponentBuildPCCPU
-                                    size={40}
-                                    styleButton={{
-                                        background: '#a62aff', borderRadius: "10px",
-                                        height: '32px',
-                                        width: '120px',
-                                        border: 'none'
-                                    }}
-                                    onClick={handleNavigateCPU}
-                                    textButton={'Chọn'}
-                                    styleTextButton={{ color: '#fff', fontSize: '15px', fontWeight: '600' }}>
-                                </BtnComponentBuildPCCPU>
-                                <WrapperListOrder>
-                                    {order?.orderItems?.map((order) => {
-                                        console.log(order)
-                                        if (order?.type === 'tản AIO') {
-                                            return (
-                                                <WrapperItemOrder key={order?.product}>
-                                                    <div style={{ width: '390px', display: 'flex', alignItems: 'center', gap: 4 }}>
-                                                        <Checkbox onChange={onChange} value={order?.product} checked={listChecked.includes(order?.product)}></Checkbox>
-                                                        <img src={order?.image} style={{ width: '77px', height: '79px', objectFit: 'cover' }} />
-                                                        <div style={{
-                                                            width: '260px',
-                                                            overflow: 'hidden',
-                                                            textOverflow: 'ellipsis',
-                                                            whiteSpace: 'nowrap'
-                                                        }}>{order?.name}</div>
-                                                    </div>
-                                                    <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                                                        <span>
-                                                            <span style={{ fontSize: '13px', color: '#242424' }}>{convertPrice(order?.price)}</span>
-                                                            {/* <WrapperPriceDiscount>
-                                                        {order?.amount}
-                                                    </WrapperPriceDiscount> */}
-                                                        </span>
-                                                        <WrapperCountOrder>
-                                                            <button style={{ border: 'none', background: 'transparent', cursor: 'pointer' }} onClick={() => handleChangeCount('decrease', order?.product, order?.amount === 1)}>
-                                                                <MinusOutlined style={{ color: '#000', fontSize: '10px' }} />
-                                                            </button>
-                                                            <WrapperInputNumber defaultValue={order?.amount} value={order?.amount} size="small" min={1} max={order?.countInstock} />
-                                                            <button style={{ border: 'none', background: 'transparent', cursor: 'pointer' }} onClick={() => handleChangeCount('increase', order?.product, order?.amount === order.countInstock)}>
-                                                                <PlusOutlined style={{ color: '#000', fontSize: '10px' }} />
-                                                            </button>
-                                                        </WrapperCountOrder>
-                                                        <span style={{ color: 'rgb(255, 66, 78)', fontSize: '13px', fontWeight: '500' }}>{convertPrice(order?.price * order?.amount)}</span>
-                                                        <DeleteOutlined style={{ cursor: 'pointer' }} onClick={() => handleDeleteOrder(order?.product)} />
-                                                    </div>
-                                                </WrapperItemOrder>
-                                            )
-                                        }
-                                    })}
-                                </WrapperListOrder>
-                            </TdBuildPC>
-                        </tr>
+                        
                         <tr>
                             <TdBuildPC >11. Nguồn</TdBuildPC>
                             <TdBuildPC>
